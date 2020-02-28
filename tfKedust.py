@@ -1,13 +1,17 @@
+import tensorflow as tf
+from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 import cv2
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' # Poistaa errorviestin, ei korjaa mitään
+
 DATADIR = "C:/Users/valtt/Desktop/Koulujutut/AMK/Ohjelmistoprojekti II/wizardify/Kedustajat" # Vaihda tämä oman koneen polkuun (pullaa gitistä omalle koneelle, en osannut luoda polkua gitiin, koska polussa pitää käyttää etukenoa ja gittiplolusta tulee mies- ja naiskansioille polkuun takakeno joten ohjelma sekoaa)
 CATEGORIES = ["Mies", "Nainen"]
 
-IMG_SIZE_X = 40 # Kuvakoko
-IMG_SIZE_Y = 60 # Kuvakoko
+IMG_SIZE_X = 100 # Kuvakoko
+IMG_SIZE_Y = 160 # Kuvakoko
 
 training_data = [] 
 def create_training_data(): # Tämä tekee datan
@@ -22,41 +26,50 @@ def create_training_data(): # Tämä tekee datan
             except Exception as e:
                 pass
 
-create_training_data() # kutsuu funktiota
-print(len(training_data)) # näyttää montako kuvaa on datassa, tämän voi kkommentoida pois
+create_training_data()
 
 import random
 random.shuffle(training_data) # sekoittaa datan, jotta koulutus on tehokkaampaa
 
-for sample in training_data[:5]: # tämä tulostaa 5 kpl näytteitä datasta, eli sample[1] on kategoria (0 mies tai 1 nainen) ja sample[0] näyttää kyseisen kuvan
-    print(sample[1])
-    plt.imshow(sample[0], cmap="gray")
+
+X = []
+y = []
+
+for features, label in training_data:
+    X.append(features)
+    y.append(label)
+
+X = np.array(X).reshape(-1, IMG_SIZE_X, IMG_SIZE_Y, 1)
+y = np.array(y)
+
+train_images = X/255.0
+test_images = X/255.0
+train_labels = y
+test_labels = y
+
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(IMG_SIZE_X,IMG_SIZE_Y,1)),
+    keras.layers.Dense(128, activation="relu"),
+    keras.layers.Dense(10, activation="softmax")
+])
+
+model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+
+model.fit(train_images, train_labels, epochs=45)
+
+# test_loss, test_acc = model.evaluate(test_images, test_labels)
+
+# print("Tesed acc:", test_acc)
+
+prediction = model.predict(test_images)
+
+# print(prediction[0])
+# print(np.argmax(prediction[0]))
+# print(class_names[np.argmax(prediction[0])])
+
+for i in range(5):
+    plt.grid(False)
+    plt.imshow(np.array(test_images[i]).reshape(IMG_SIZE_Y, IMG_SIZE_X), cmap="gray")
+    plt.xlabel("Actual: " + CATEGORIES[test_labels[i]])
+    plt.title("Prediction: " + CATEGORIES[np.argmax(prediction[i])])
     plt.show()
-
-# alla oleva tallentaa datan, en ole varma toimiiko tämä
-
-# X = []
-# y = []
-
-# for features, label in training_data:
-#     X.append(features)
-#     y.append(label)
-
-# x = np.array(X).reshape(-1, IMG_SIZE_X, IMG_SIZE_Y, 1)
-
-# import pickle
-
-# pickle_out = open("X.pickle", "wb")
-# pickle.dump(X, pickle_out)
-# pickle_out.close()
-
-# pickle_out = open("y.pickle", "wb")
-# pickle.dump(y, pickle_out)
-# pickle_out.close()
-
-# pickle_in = open("X.pickle", "rb")
-# X = pickle.load(pickle_in)
-
-# X[1]
-
-    
