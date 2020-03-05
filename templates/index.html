@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    Eduskuntafy
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="button">
+    <form action="/result" method="post">
+        <input type="file" name="image" id="image">
+        <br>
+        <br>
+        <input type="submit" formmethod="POST" value="GO!">
+    </form>
+    <br>
+    <!-- This is for demo-purposes only -->
+    <!-- <form action="/result" method="GET">
+        <button style="background-color:lightskyblue;" type="submit">Begin</button>
+    </form> -->
+    <br>
+</div>
+{% endblock %}
