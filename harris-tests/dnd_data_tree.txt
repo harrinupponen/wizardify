@@ -1,0 +1,76 @@
+- dnd_classes
+    - train
+        - barbarian
+            - 50 augm. (from 1 sample image) images
+        - bard
+            - 50 augm. (from 1 sample image) images
+        - cleric
+            - 50 augm. (from 1 sample image) images
+        - druid
+            - 50 augm. (from 1 sample image) images
+        - fighter
+            - 50 augm. (from 1 sample image) images
+        - mage
+            - 50 augm. (from 1 sample image) images
+        - monk
+            - 50 augm. (from 1 sample image) images
+        - paladin
+            - 50 augm. (from 1 sample image) images
+        - rogue
+            - 50 augm. (from 1 sample image) images
+        - sorcerer
+            - 50 augm. (from 1 sample image) images
+        - warlock
+            - 50 augm. (from 1 sample image) images
+        - wizard
+            - 50 augm. (from 1 sample image) images
+    - valid
+        - barbarian
+            - 8 augm. (from 1 sample image) images
+        - bard
+            - 8 augm. (from 1 sample image) images
+        - cleric
+            - 8 augm. (from 1 sample image) images
+        - druid
+            - 8 augm. (from 1 sample image) images
+        - fighter
+            - 8 augm. (from 1 sample image) images
+        - mage
+            - 8 augm. (from 1 sample image) images
+        - monk
+            - 8 augm. (from 1 sample image) images
+        - paladin
+            - 8 augm. (from 1 sample image) images
+        - rogue
+            - 8 augm. (from 1 sample image) images
+        - sorcerer
+            - 8 augm. (from 1 sample image) images
+        - warlock
+            - 8 augm. (from 1 sample image) images
+        - wizard
+            - 8 augm. (from 1 sample image) images
+    - test
+        - barbarian
+            - 5 augm. (from 1 sample image) images
+        - bard
+            - 5 augm. (from 1 sample image) images
+        - cleric
+            - 5 augm. (from 1 sample image) images
+        - druid
+            - 5 augm. (from 1 sample image) images
+        - fighter
+            - 5 augm. (from 1 sample image) images
+        - mage
+            - 5 augm. (from 1 sample image) images
+        - monk
+            - 5 augm. (from 1 sample image) images
+        - paladin
+            - 5 augm. (from 1 sample image) images
+        - rogue
+            - 5 augm. (from 1 sample image) images
+        - sorcerer
+            - 5 augm. (from 1 sample image) images
+        - warlock
+            - 5 augm. (from 1 sample image) images
+        - wizard
+            - 5 augm. (from 1 sample image) images       
