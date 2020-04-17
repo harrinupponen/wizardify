@@ -23,6 +23,8 @@ def preprocess_image(image, target_size):
         image = image.convert('RGB')
     image = image.resize(target_size)
     image = img_to_array(image)
+    image = image.astype('float32')
+    image = (image - 127.5) / 127.5
     image = np.expand_dims(image, axis=0)
 
     return image
