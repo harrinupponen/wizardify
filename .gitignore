@@ -1,2 +1,4 @@
 venv/
 __pychache__
+settings.json
+.DS_Store
