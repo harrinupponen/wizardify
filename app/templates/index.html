@@ -12,11 +12,11 @@
 <br>
 <br>
 <div class="button">
-    <form action="/result" method="post">
-        <input type="file" name="image" id="image">
+    <form method="post" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file" id="image">
         <br>
         <br>
-        <input type="submit" formmethod="POST" value="GO!">
+        <input type="submit" value="file">
     </form>
     <br>
     <!-- This is for demo-purposes only -->
