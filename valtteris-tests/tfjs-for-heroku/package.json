@@ -1,0 +1,21 @@
+{
+    "name": "tensorflowjs",
+    "version": "1.0.0",
+    "description": "Node app for TensorflowJs",
+    "main": "server.js",
+    "engines": {
+        "node": "12.x"
+    },
+    "dependencies": {
+        "express": "^4.9.8",
+        "@tensorflow/tfjs-node": "^1.3.2",
+        "argparse": "^1.0.10"
+    },
+    "scripts": {
+        "dnd_classes": "dnd_classes.js",
+        "predict": "node predict.js"
+    },
+    "devDependencies": {
+        "request": "^2.81.0"
+    }
+}
