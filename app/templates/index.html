@@ -1,28 +1,31 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
-{% block title %}
-    Eduskuntafy
-{% endblock %}
-{% block app_content %}
-{# this shows form if there is any passed in routes.py #}
-    {% if form %}
-        {{ wtf.quick_form(form) }}
-    <br>
-    {% endif %}
-<br>
-<br>
-<div class="button">
-    <form method="post" enctype="multipart/form-data" action="/upload">
-        <input type="file" name="file" id="image">
-        <br>
-        <br>
-        <input type="submit" value="file">
-    </form>
-    <br>
-    <!-- This is for demo-purposes only -->
-    <!-- <form action="/result" method="GET">
-        <button style="background-color:lightskyblue;" type="submit">Begin</button>
-    </form> -->
-    <br>
+
+{% block content %}
+<h1 id="subtitle">Wizardify yer life!</h1>
+<!-- Upload image -->
+
+<div id="subcontainer">
+  <div class="row">
+    <div class="col-4">
+      <h3>Your results:</h3>
+    </div>
+    <div class="col-8">
+      <h3>Upload image</h3>
+      <div class="user-image">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Tony_Shalhoub_as_Adrian_Monk.jpg/250px-Tony_Shalhoub_as_Adrian_Monk.jpg" alt="User image">
+          <div class="card-body">
+            <p class="card-text">A placeholder-Monk.</p>
+          </div>
+        </div>
+      </div>
+      <form id="upload-form" action="{{ url_for( 'index' ) }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <input type="submit" value="Do it!">
+      </form>
+    </div>
+  </div>
 </div>
-{% endblock %}
+
+{% endblock  content%}
