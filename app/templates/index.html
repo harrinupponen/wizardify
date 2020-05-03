@@ -2,13 +2,17 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block content %}
-<h1 id="subtitle">Wizardify yer life!</h1>
+<h1 id="subtitle">Welcome to Wizardify</h1>
 <!-- Upload image -->
 
 <div id="subcontainer">
   <div class="row">
     <div class="col-4">
-      <h3>Your results:</h3>
+      <h3>To reveal your inner self:</h3>
+      <br>
+      <h5 class="d-flex justify-content-left align-self-start">Step 1. Upload a picture in the field next to this</h5>
+      <h5 class="d-flex justify-content-left align-self-center">Step 2. Press the button labeled 'Do it!'</h5>
+      <h5 class="d-flex justify-content-left">Step 3. That's it</h5>
     </div>
     <div class="col-8">
       <h3>Upload image</h3>
@@ -20,7 +24,7 @@
           </div>
         </div>
       </div>
-      <form id="upload-form" action="{{ url_for( 'index' ) }}" method="POST" enctype="multipart/form-data">
+      <form id="upload-form" action="{{ url_for( 'result' ) }}" method="GET" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/*">
         <input type="submit" value="Do it!">
       </form>

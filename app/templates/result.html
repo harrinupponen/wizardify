@@ -1,18 +1,31 @@
-{% extends "base.html" %}
-{% block title %}
-    Eduskuntafy
-{% endblock %}
-{% block app_content %}
-    <div class="container">
-        <img src="https://www.verkkouutiset.fi/wp-content/uploads/2018/10/46143630-1118x629.jpg" alt="Mikko Alatalo">
-        <br>
-        Onneksi olkoon, olet toistaiseksi kansanedustaja
-        <br>
-        <br>
+{% extends "layout.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<h1 id="subtitle">Consider yourself Wizardified</h1>
+<!-- Upload image -->
+
+<div id="subcontainer">
+  <div class="row">
+    <div class="col-4">
+        <h3>The results are in:</h3>
+        <!-- This is where the results should read -->
+
     </div>
-    <div class="button">
-        <form action="/" method="GET">
-            <button style="background-color:lightskyblue;" type="submit">Home</button>
-        </form>
+    <div class="col-8">
+    <h3>Congratulations!</h3>
+        <div class="user-image">
+          <div class="card" style="width: 30rem;">
+            <!-- And instead of dr Julian Sanchez here should be the user image -->
+            <img class="card-img-top" src="https://i.kym-cdn.com/photos/images/newsfeed/000/821/036/187.gif" alt="User image">
+            <div class="card-body">
+              <p class="card-text">This is you</p>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-dark" href="{{ url_for( 'index' ) }}">Home</a>
     </div>
-{% endblock %}
+  </div>
+</div>
+
+{% endblock  content%}
