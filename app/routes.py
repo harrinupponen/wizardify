@@ -28,7 +28,10 @@ def classes():
 
 @app.route('/about', methods=["GET"])
 def about():
-   return render_template('about.html')
+    with open("wizardify-about.txt", "r", encoding = "ISO-8859-1") as file:
+        content = file.read()
+    return render_template('about.html', content=content)
+
 
 @app.route('/upload', methods=['POST'])
 def upload_file():

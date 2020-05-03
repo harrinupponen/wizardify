@@ -20,7 +20,17 @@ body {
     text-align: center;
 }
 
+pre .content {
+  font-family: 'Montaga', serif;
+  text-align: center;
+  height: auto;
+  display: table;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+
 #container {
+    display: inline-block;
     min-height: 100%;
     position: relative;
     padding-bottom: 50px;
