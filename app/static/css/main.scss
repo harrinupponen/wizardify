@@ -8,7 +8,7 @@ body, html {
 body {
     padding: 25px;
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     font-family: 'Montaga', serif;
     background-color: rgb(247, 247, 247);
 }
@@ -28,6 +28,7 @@ pre .content {
   word-wrap: break-word;
   overflow-y: scroll;
 }
+
 
 #container {
     display: inline-block;
@@ -53,8 +54,6 @@ pre .content {
         justify-content: center;
     }
 }
-
-
 
 .navbar .navbar-brand {
     padding-top: 0px;
