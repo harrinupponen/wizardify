@@ -1,18 +1,29 @@
-{% extends "base.html" %}
+
+{% extends "index.html" %}
 {% block title %}
     Eduskuntafy
 {% endblock %}
 {% block app_content %}
     <div class="container">
-        <img src="https://www.verkkouutiset.fi/wp-content/uploads/2018/10/46143630-1118x629.jpg" alt="Mikko Alatalo">
-        <br>
-        Onneksi olkoon, olet toistaiseksi kansanedustaja
-        <br>
-        <br>
+        <p><strong>Prediction</strong></p>
+        <table>
+            <tr>
+                    <th>Class</th>
+                    <th>Prediction</th>             
+            </tr>
+       {% for key, value in predictions %}
+      
+        <tr>
+            <td>
+            {{key}}
+            </td>
+            <td>{{value}}</td>
+        </tr>  
+       {% endfor %}
+    </table>
+    <img id="selected-image" src="{{fileurl}}" alt="selected-image">
     </div>
-    <div class="button">
-        <form action="/" method="GET">
-            <button style="background-color:lightskyblue;" type="submit">Home</button>
-        </form>
-    </div>
+
+    
+    
 {% endblock %}
