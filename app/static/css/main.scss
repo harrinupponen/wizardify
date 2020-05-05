@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+body {
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Montaga', serif;
+    background-color: rgb(247, 247, 247);
+}
+
+#subtitle {
+    padding-top: 45px;
+    padding-bottom: 25px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
+.container.col-lg-8 {
+  padding-top: 25px;
+}
+
+pre .content {
+  font-family: 'Montaga', serif;
+  text-align: center;
+  height: auto;
+  display: table;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+
+
+#container {
+    display: inline-block;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 25px;
+}
+
+#subcontainer {
+    padding-top: 20px;
+    position: relative;
+    min-height: 100%;
+    height: 666px;
+    text-align: center;
+    background-color: rgb(255, 238, 238);
+
+    .user-image {
+        padding-bottom: 40px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.navbar .navbar-brand {
+    padding-top: 0px;
+}
+
+nav {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    a {
+        padding-left: 150px;
+        color: #fff;
+    }
+    
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px 15px;
+  }
+
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    transition: transform .5s;
+
+    &:hover {
+        background-color: rgb(228, 228, 228);
+        transform: translateY(-10px);
+        opacity: 0.9;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+  
+  }
+
+  .footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+  }

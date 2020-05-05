@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<h1 id="subtitle">Consider yourself Wizardified</h1>
+<!-- Upload image -->
+
+<div id="subcontainer">
+  <div class="row">
+    <div class="col-4">
+        <h3>The results are in:</h3>
+        <!-- This is where the results should read -->
+        <div class="container">
+          <p><strong>Prediction</strong></p>
+          <table>
+              <tr>
+                      <th>Class</th>
+                      <th>Prediction</th>             
+              </tr>
+         {% for key, value in predictions %}
+        
+          <tr>
+              <td>{{key}}</td>
+              <td>{{(value * 100)|round(2, 'floor')}} %</td>
+          </tr>  
+         {% endfor %}
+      </table>
+      </div>
+
+    </div>
+    <div class="col-8">
+    <h3>Congratulations!</h3>
+        <div class="user-image">
+          <div class="card" style="width: 30rem;">
+            <!-- And instead of dr Julian Sanchez here should be the user image -->
+            <img class="card-img-top" src="{{fileurl}}" alt="User image">
+            <div class="card-body">
+              <p class="card-text">This is you</p>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-dark" href="{{ url_for( 'index' ) }}">Home</a>
+    </div>
+  </div>
+</div>
+
+{% endblock  content%}
