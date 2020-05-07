@@ -134,5 +134,6 @@ def result():
             }
 
         sorted_predictions = sorted(prediction_array.items(), key=lambda p: p[1], reverse=True)    
-
-        return render_template('result.html', predictions = sorted_predictions, fileurl = url_for('uploaded_file', filename=filename))
+        
+       
+        return render_template('result.html', firstitem = sorted_predictions[0], predictions = sorted_predictions, fileurl = url_for('uploaded_file', filename=filename))

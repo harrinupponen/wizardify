@@ -12,17 +12,25 @@
         <!-- This is where the results should read -->
         <div class="container">
           <p><strong>Prediction</strong></p>
+          
+        
+            <h2>Class: {{firstitem[0]}}</h2>
+            <h2>Percentage: {{firstitem[1]}}</h2>
+            
+         
           <table>
               <tr>
                       <th>Class</th>
                       <th>Prediction</th>             
               </tr>
          {% for key, value in predictions %}
-        
+              {% if not loop.first %}
+             
           <tr>
               <td>{{key}}</td>
               <td>{{(value * 100)|round(2, 'floor')}} %</td>
           </tr>  
+          {% endif %}
          {% endfor %}
       </table>
       </div>
