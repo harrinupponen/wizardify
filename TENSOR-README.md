@@ -9,9 +9,6 @@ There are 12 classes to compare with.
 
 ### Prerequisites (at the moment)
 
-- Flask 1.1.1
-- Flask-Cors 3.0.8
-- gunicorn 20.0.4
 - h5py 2.10.0
 - numpy 1.18.2
 - Pillow 7.0.0
@@ -19,7 +16,6 @@ There are 12 classes to compare with.
 - Python 3.6.8
 - (Python) setuptools 46.1.3
 - tensorflow 2.0.0
-- Heroku for deploying
 
 ### Data augmentation and preparation
 
@@ -61,4 +57,4 @@ def get_model():
 
 ### User's image preparation for the model
 
-Check out the `app.py` for the details
+Check out the [`routes.py`](https://github.com/harrinupponen/wizardify/blob/latest/app/routes.py) for the details
