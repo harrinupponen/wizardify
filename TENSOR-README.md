@@ -44,13 +44,18 @@ new model and save it.
 
 ### Loading the model
 
-I have the `app.py` and the model `mn_actoress_model2.h5` in the root of my project.
-Then in the app.py there is a function to load the model:
+We have the [`routes.py`](https://github.com/harrinupponen/wizardify/blob/latest/app/routes.py) in `app/` and the model
+`final_mn_dnd_model.h5` in the root of the project.
+Then in the routes.py there is a function to load the model:
 
 ```python
+from tensorflow.keras.models import load_model
+.
+.
+.
 def get_model():
     global model
-    model = load_model('mn_actoress_model2.h5')
+    model = load_model('final_mn_dnd_model.h5')
     print(' * Model loaded!')
 ```
 
