@@ -23,11 +23,11 @@ There are 12 classes to compare with.
 
 ### Data augmentation and preparation
 
-# Valtteri kirjotatko tämän:
-
-First we surfed the internet for two male and two female pictures of every DnD-class that showed the whole body of the characters. We then cropped those pictures by hand to get four more pictures of face and chest area.
+First we surfed the internet for two male and two female pictures of every twelve DnD-class that showed the whole character. We then cropped those pictures by hand to get four more pictures of face area.
 
 The eight pictures of every class were then put through the augmentation-algorithm, that created about 425 training images, 230 validation images and 96 test images of every class. See the [`final_data_tree.txt`](https://github.com/harrinupponen/wizardify/blob/tensorflow/final-model/final_data_tree.txt) for details.
+
+The augmentation was done by iterating through every classes source folder and the eight pictures in them. The pictures ran nine iterations for training, five for validation and two for testing. Each iteration added to the values of the augmentation settings, so that the data would be consistent but at the same time varying. Then the algorithm iterated five times per each setting, so that every picture would go through every stage. The details of this process can be seen in `data_augmentation.py`.
 
 For the augmentation and details for the ImageDataGenerator processes check out:
 
