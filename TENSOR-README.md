@@ -25,8 +25,9 @@ There are 12 classes to compare with.
 
 # Valtteri kirjotatko tämän:
 
-I picked up 2 images of each actor/actress and augmented 25 + 25 images
-for training and 5 + 5 images for validation. So for each actor/actress 50 training images and 10 validation images. Check out the `actoress-data-tree.txt`
+First we surfed the internet for two male and two female pictures of every DnD-class that showed the whole body of the characters. We then cropped those pictures by hand to get four more pictures of face and chest area.
+
+The eight pictures of every class were then put through the augmentation-algorithm, that created about 425 training images, 230 validation images and 96 test images of every class. See the [`final_data_tree.txt`](https://github.com/harrinupponen/wizardify/blob/tensorflow/final-model/final_data_tree.txt) for details.
 
 For the augmentation and details for the ImageDataGenerator processes check out:
 
