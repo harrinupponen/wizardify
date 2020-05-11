@@ -8,3 +8,5 @@ npm-debug.log
 *.env
 *.dev
 .DS_Store
+.vscode/
+__pycache__/
