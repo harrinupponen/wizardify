@@ -1,4 +1,4 @@
-# Actoress lookalike predictor app
+# Details of the ML part of the project
 
 ### The Idea
 
