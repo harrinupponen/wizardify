@@ -9,7 +9,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [License](#license)
 
 ## About The Project
@@ -26,8 +25,6 @@ Simple, but effective, interface guides you on your journey. :compass:
 ### Built With
 
 * [Python](https://www.python.org/)
-* [TensorFlow](https://www.tensorflow.org/)
-* [Keras](https://keras.io/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Bootstrap](https://getbootstrap.com)
 
@@ -89,9 +86,6 @@ Show content of requirements.txt
 ```sh
 cat requirements.txt
 ```
-
-## Usage
-
 
 ## License 
 <!-- What license are we using?-->
