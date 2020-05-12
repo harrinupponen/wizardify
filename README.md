@@ -32,7 +32,7 @@ The idea for the project was born from a need to learn about Machine Learning. A
 
 The program is Python based web application that is built upon a Flask framework. Our Tensorflow and Keras based AI program is separate from the web application, but the model that is built with it is critical to the app.
 
-The readme for the Tensorflow part can be seen here:
+The readme for the Tensorflow part can be seen here: [TENSOR-README](https://github.com/harrinupponen/wizardify/blob/master/TENSOR-README.md)
 
 Flask is used to work out the routing on the app. The front page of the web app can recieve images sent by the user, which are then routed to the model for comparison. After the results are in, the user is redirected to the results page. The visuals of the app use Flask Bootstrap.
 
@@ -50,7 +50,7 @@ https://www.python.org/downloads/
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
+git clone https://github.com/harrinupponen/wizardify.git
 ```
 
 2. Create virtual environment: 
