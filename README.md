@@ -6,6 +6,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Implementation](#implementation)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,6 +30,14 @@ The idea for the project was born from a need to learn about Machine Learning. A
 * [Bootstrap](https://getbootstrap.com)
 * [TensorFlow](https://www.tensorflow.org/)
 * [Keras](https://keras.io/)
+
+## Implementation
+
+The program is Python based web application that is built upon a Flask framework. Our Tensorflow and Keras based AI program is separate from the web application, but the model that is built with it is critical to the app.
+
+The readme for the Tensorflow part can be seen here:
+
+Flask is used to work out the routing on the app. The front page of the web app can recieve images sent by the user, which are then routed to the model for comparison. After the results are in, the user is redirected to the results page. The visuals of the app use Flask Bootstrap.
 
 ## Getting Started
 
