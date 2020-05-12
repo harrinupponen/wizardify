@@ -28,6 +28,7 @@ Simple, but effective, interface guides you on your journey. :compass:
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Bootstrap](https://getbootstrap.com)
 * [TensorFlow](https://www.tensorflow.org/)
+* [Keras](https://keras.io/)
 
 ## Getting Started
 
