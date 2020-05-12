@@ -1,35 +1,40 @@
 # Wizardify 
-<!-- https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#person-fantasy-->
 
 
 ## Table of Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Implementation](#implementation)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [License](#license)
 
 ## About The Project
 
-<!--pic here ?-->
-<img src="logo.png">
-
-This is machine-learning based project was created to help answer the burning question everyone wonders time to time:
+A web service that uses Deep Learning AI to analyse pictures and categorize them. 
+This machine-learning project was created to help answer the burning question:
 
 What is my D&D -class?
 
-Simple, but effective, interface guides you on your journey. :compass:
+The idea for the project was born from a need to learn about Machine Learning. After some thought, we landed on image analysis and a Dungeons & Dragons based concept. The basic idea was to create an AI model that could analyse a picture and categorize it based on the 12 classes of the game. This model would be deployed into a web app for easy access to all.
 
 ### Built With
 
 * [Python](https://www.python.org/)
-* [TensorFlow](https://www.tensorflow.org/)
-* [Keras](https://keras.io/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Bootstrap](https://getbootstrap.com)
+* [TensorFlow](https://www.tensorflow.org/)
+* [Keras](https://keras.io/)
+
+## Implementation
+
+The program is Python based web application that is built upon a Flask framework. Our Tensorflow and Keras based AI program is separate from the web application, but the model that is built with it is critical to the app.
+
+The readme for the Tensorflow part can be seen here: [TENSOR-README](https://github.com/harrinupponen/wizardify/blob/master/TENSOR-README.md)
+
+Flask is used to work out the routing on the app. The front page of the web app can recieve images sent by the user, which are then routed to the model for comparison. After the results are in, the user is redirected to the results page. The visuals of the app use Flask Bootstrap.
 
 ## Getting Started
 
@@ -45,7 +50,7 @@ https://www.python.org/downloads/
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
+git clone https://github.com/harrinupponen/wizardify.git
 ```
 
 2. Create virtual environment: 
@@ -89,9 +94,6 @@ Show content of requirements.txt
 ```sh
 cat requirements.txt
 ```
-
-## Usage
-
 
 ## License 
 <!-- What license are we using?-->

@@ -1,3 +1,7 @@
+$bg-color: rgb(62, 67, 68);
+$subcon-color: rgb(231, 245, 253);
+
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +14,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: 'Montaga', serif;
-    background-color: rgb(247, 247, 247);
+    background-color: $bg-color;
 }
 
 #subtitle {
@@ -18,10 +22,7 @@ body {
     padding-bottom: 25px;
     font-family: 'Dancing Script', cursive;
     text-align: center;
-}
-
-.container.col-lg-8 {
-  padding-top: 25px;
+    color: white;
 }
 
 pre .content {
@@ -36,6 +37,7 @@ pre .content {
 
 #container {
     display: inline-block;
+    width: 100%;
     min-height: 100%;
     position: relative;
     padding-bottom: 50px;
@@ -43,21 +45,103 @@ pre .content {
 }
 
 #subcontainer {
-    padding-top: 20px;
-    position: relative;
+    position: static;
     min-height: 100%;
-    height: 666px;
+    height: 800px;
+    width: 100%;
     text-align: center;
-    background-color: rgb(255, 238, 238);
+    background-color: $subcon-color;
+
+    #edge-l {
+      background-image: linear-gradient(to right, $bg-color, $subcon-color);
+    }
+
+    #edge-r {
+      background-image: linear-gradient(to left, $bg-color, $subcon-color);
+    }
+
+    #index-col-4-l {
+      padding-top: 25px;
+      padding-left: 25px;
+      text-align: left;
+    }
+    #index-col-4-r {
+      padding-top: 25px;
+      text-align: center;
+
+    }
 
     .user-image {
-        padding-bottom: 40px;
-        padding-top: 20px;
+        padding-bottom: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
+    .user-image-result {
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .result-card {
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 }
+
+#classcontainer {
+  padding: 25px, 150px, 25px, 150px;
+
+
+  .class-img {
+    padding: 5px;
+    width: 150px;
+    height: auto;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#aboutcontainer {
+  padding-top: 25px;
+  padding-left: 25px;
+  background-image: radial-gradient($subcon-color, $bg-color);
+
+  .content {
+    color: white;
+
+  }
+}
+
+
+#bottom-row {
+  
+  .col-sm {
+    margin: 0;
+    padding-top: 15px;
+  }
+}
+
+.table {
+  margin: auto;
+  padding-top: 10px;
+}
+
+.result-list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .navbar .navbar-brand {
     padding-top: 0px;
@@ -83,52 +167,61 @@ nav {
     box-sizing: border-box;
   }
   
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px 15px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
   .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px 15px;
-  }
-
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-
-    transition: transform .5s;
-
-    &:hover {
-        background-color: rgb(228, 228, 228);
-        transform: translateY(-10px);
-        opacity: 0.9;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
-  
-  }
-
-  .footer {
-    position:absolute;
-    bottom: 0;
     width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+
+  transition: transform .5s;
+
+  &:hover {
+      background-color: rgb(228, 228, 228);
+      transform: translateY(-10px);
+      opacity: 0.9;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+}
+
+.card-img-top {
+  max-width: 300px;
+  max-height: 420px;
+}
+
+.card-body {
+  margin-top: 0;
+}
+
+.footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+}
