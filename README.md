@@ -15,8 +15,8 @@
 
 <!--pic here ?-->
 <img src="logo.png">
-
-This is machine-learning based project was created to help answer the burning question everyone wonders time to time:
+A web service that uses Deep Learning AI to analyse pictures and categorize them. 
+This machine-learning project was created to help answer the burning question:
 
 What is my D&D -class?
 
@@ -27,6 +27,7 @@ Simple, but effective, interface guides you on your journey. :compass:
 * [Python](https://www.python.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Bootstrap](https://getbootstrap.com)
+* [TensorFlow](https://www.tensorflow.org/)
 
 ## Getting Started
 
