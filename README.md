@@ -1,5 +1,4 @@
 # Wizardify 
-<!-- https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#person-fantasy-->
 
 
 ## Table of Contents
@@ -14,8 +13,6 @@
 
 ## About The Project
 
-<!--pic here ?-->
-<img src="logo.png">
 A web service that uses Deep Learning AI to analyse pictures and categorize them. 
 This machine-learning project was created to help answer the burning question:
 
