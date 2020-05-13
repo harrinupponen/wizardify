@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<h1 id="subtitle">Wizardify</h1>
+<!-- Upload image -->
+
+<div id="subcontainer">
+  <div class="row h-100">
+    <div class="col-2" id="edge-l">
+      <!-- Left edge -->
+    </div>
+    <div class="col-4" id="index-col-4-l">
+      <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
+        <div class="card-header">Instructions:</div>
+        <div class="card-body">
+          <h3 class="card-title">To find out your latent </br> Dungeons & Dragon - Class:</h3>
+          <br>
+          <h5 class="d-flex justify-content-left">Step 1. Upload a picture in the field on the right</h5>
+          <h5 class="d-flex justify-content-left">Step 2. Press the button labeled 'Tell me!'</h5>
+          <h5 class="d-flex justify-content-left">Step 3. Bask in the glory of your result</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-4" id="index-col-4-r">
+      <div class="user-image">
+        <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
+          <div class="card-header">Upload image</div>
+          <div class="card-body">
+            <div class="card" style="width: 18rem;">
+              <img id="selected-image" class="card-img-top" src="" alt="User image">
+              <div class="card-body">
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card" style="width: 18rem;">
+          <img id="selected-image" class="card-img-top" src="" alt="User image">
+          <div class="card-body">
+            <p class="card-text"></p>
+          </div>
+        </div> -->
+      </div>
+      <form action="/result" method="POST" enctype="multipart/form-data">
+        <input id="image-selector" type="file" name="file">
+        <button id="predict-button" type="submit">Tell me!</button>
+    </form>
+    </div>
+    <div class="col-2" id="edge-r">
+      <!-- Right edge -->
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$('#image-selector').change(function() {
+  let reader = new FileReader();
+  reader.onload = function() {
+      let dataURL = reader.result;
+      $('#selected-image').attr('src', dataURL);
+      $('#prediction-list').empty();
+  }
+  let file = $('#image-selector').prop('files')[0];
+  reader.readAsDataURL(file);
+});</script>
+
+{% endblock  content%}

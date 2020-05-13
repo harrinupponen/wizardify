@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<h1 id="subtitle">Congratulations!</h1>
+
+<!-- First column: full results-->
+<div id="subcontainer">
+  <div class="row h-100">
+    <div class="col-3" id="edge-l">
+        <!-- <h3>Full list:</h3> -->
+        <div class="result-card d-flex justify-content end">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header"><h5>Full results:</h5></div>
+            <div class="card-body">
+              <a href="#" class="btn btn-dark stretched-link" data-toggle="collapse" data-target="#class-list">Open</a>
+              <div class="collapse" id="class-list">
+                <div class="well">
+                  <table class="table table-responsive">
+                    <tr>
+                      <th><h5>Class</h5></th>
+                      <th><h5>Accuracy</h5></th>             
+                    </tr>
+                      {% for key, value in predictions %}
+                      {% if not loop.first %}
+                    
+                    <tr>
+                      <td>{{key}}</td>
+                      <td>{{(value * 100)|round(2, 'floor')}} %</td>
+                    </tr>  
+                      {% endif %}
+                      {% endfor %}
+                  </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Second column: #1 Class -->
+    <div class="col-6">
+    <!-- <h3>You are:</h3> -->
+        <div class="user-image-result">
+          <div class="card" style="width: 28rem;">
+            <!-- Image of the Class -->
+            <div class="card-header"><h5>You are:</h5></div>
+            <br>
+            <img class="card-img-top mx-auto" src="{{fileurl}}" alt="User image">
+            <div class="card-body">
+              <h3>Class: {{firstitem[0]}}</h3>
+              <h4>Accuracy: {{firstitem[1] * 100}} %</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Third Column: Class -link -->
+    <div class="col-3" id="edge-r">
+          <div class="result-card d-flex justify-content start">
+            <div class="card" style="width: 18rem;">
+              <div class="card-header"><h5>Further information:</h5></div>
+              <div class="card-body">
+                <a class="btn btn-dark" href="{{ url_for('classes') }}">Classes</a>
+              </div>
+            </div>
+          </div>          
+      </div>
+  </div>
+</div>
+<row id="bottom-row">
+  <div class="col-sm d-flex justify-content-end">
+    <a class="btn btn-dark btn-arrow-right" href="{{ url_for( 'index' ) }}">Home</a>
+  </div>      
+</row>
+
+{% endblock  content%}
