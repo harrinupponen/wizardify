@@ -2,7 +2,10 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block content %}
-<h1 id="subtitle">Congratulations!</h1>
+<!-- Page title -->
+<div id="title-container">
+  <h1 id="subtitle">Congratulations!</h1>
+</div>
 
 <!-- First column: full results-->
 <div id="subcontainer">
@@ -66,10 +69,12 @@
       </div>
   </div>
 </div>
-<row id="bottom-row">
-  <div class="col-sm d-flex justify-content-end">
-    <a class="btn btn-dark btn-arrow-right" href="{{ url_for( 'index' ) }}">Home</a>
-  </div>      
-</row>
+<div class="row-100">
+  <row id="bottom-row">
+    <div class="col-sm d-flex justify-content-center">
+      <a class="btn btn-dark btn-arrow-right" href="{{ url_for( 'index' ) }}">Home</a>
+    </div>      
+  </row>
+</div>
 
 {% endblock  content%}

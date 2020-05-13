@@ -8,37 +8,47 @@ body, html {
 }
 
 body {
-  padding: 25px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin: 0;
+  padding: 5px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   font-family: 'Montaga', serif;
-  background-color: #3e4344;
+  background-color: #494f50;
+}
+
+nav {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+}
+
+nav a {
+  padding-left: 50px;
+  color: #fff;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+}
+
+#title-container {
+  margin-top: 65px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #subtitle {
-  padding-top: 45px;
-  padding-bottom: 25px;
   font-family: 'Dancing Script', cursive;
   text-align: center;
   color: white;
 }
 
-pre .content {
-  font-family: 'Montaga', serif;
-  text-align: center;
-  height: auto;
-  display: table;
-  word-wrap: break-word;
-  overflow-y: scroll;
-}
-
-#container {
+#pagecontainer {
   display: inline-block;
   width: 100%;
   min-height: 100%;
   position: relative;
-  padding-bottom: 50px;
-  padding-top: 25px;
 }
 
 #subcontainer {
@@ -51,19 +61,20 @@ pre .content {
 }
 
 #subcontainer #edge-l {
-  background-image: -webkit-gradient(linear, left top, right top, from(#3e4344), to(#e7f5fd));
-  background-image: linear-gradient(to right, #3e4344, #e7f5fd);
+  background-image: -webkit-gradient(linear, left top, right top, from(#494f50), to(#e7f5fd));
+  background-image: linear-gradient(to right, #494f50, #e7f5fd);
 }
 
 #subcontainer #edge-r {
-  background-image: -webkit-gradient(linear, right top, left top, from(#3e4344), to(#e7f5fd));
-  background-image: linear-gradient(to left, #3e4344, #e7f5fd);
+  background-image: -webkit-gradient(linear, right top, left top, from(#494f50), to(#e7f5fd));
+  background-image: linear-gradient(to left, #494f50, #e7f5fd);
 }
 
 #subcontainer #index-col-4-l {
   padding-top: 25px;
   padding-left: 25px;
-  text-align: left;
+  padding-bottom: 300px;
+  text-align: center;
 }
 
 #subcontainer #index-col-4-r {
@@ -110,11 +121,18 @@ pre .content {
           justify-content: center;
 }
 
-#classcontainer {
-  padding: 25px, 150px, 25px, 150px;
+#classes {
+  overflow: auto;
+  height: auto;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+  background-image: radial-gradient(#e6e6e6, #494f50);
 }
 
-#classcontainer .class-img {
+#classes #classcontainer .class-img {
   padding: 5px;
   width: 150px;
   height: auto;
@@ -126,12 +144,17 @@ pre .content {
 
 #aboutcontainer {
   padding-top: 25px;
+  padding-bottom: 25px;
   padding-left: 25px;
-  background-image: radial-gradient(#e7f5fd, #3e4344);
+  background-image: radial-gradient(#e7f5fd, #494f50);
 }
 
 #aboutcontainer .content {
   color: white;
+}
+
+#bottom-row {
+  background-image: radial-gradient(#e6e6e6, #292b2c);
 }
 
 #bottom-row .col-sm {
@@ -156,30 +179,6 @@ pre .content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.navbar .navbar-brand {
-  padding-top: 0px;
-}
-
-nav {
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-}
-
-nav a {
-  padding-left: 150px;
-  color: #fff;
-}
-
-.title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 32px;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .column {
@@ -232,10 +231,6 @@ nav a {
 .card-img-top {
   max-width: 300px;
   max-height: 420px;
-}
-
-.card-body {
-  margin-top: 0;
 }
 
 .footer {
