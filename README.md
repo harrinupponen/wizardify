@@ -8,6 +8,7 @@
   - [About The Project](#about-the-project)
     - [Built With](#built-with)
   - [Implementation](#implementation)
+  - [Tensorflow js](#tensorflow-js)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
@@ -38,6 +39,10 @@ The program is Python based web application that is built upon a Flask framework
 The readme for the Tensorflow part can be seen here: [TENSOR-README](https://github.com/harrinupponen/wizardify/blob/master/TENSOR-README.md)
 
 Flask is used to work out the routing on the app. The front page of the web app can recieve images sent by the user, which are then routed to the model for comparison. After the results are in, the user is redirected to the results page. The visuals of the app use Flask Bootstrap.
+
+## Tensorflow js
+
+We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://www.heroku.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
 
 ## Getting Started
 
