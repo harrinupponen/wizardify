@@ -20,7 +20,7 @@
 A web service that uses Deep Learning AI to analyse pictures and categorize them. 
 This machine-learning project was created to help answer the burning question:
 
-What is my D&D -class?
+What is my D&D -class? Go to [Wizardify-App](https://wizardify.herokuapp.com) and find out!
 
 The idea for the project was born from a need to learn about Machine Learning. After some thought, we landed on image analysis and a Dungeons & Dragons based concept. The basic idea was to create an AI model that could analyse a picture and categorize it based on the 12 classes of the game. This model would be deployed into a web app for easy access to all.
 
