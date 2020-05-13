@@ -58,3 +58,15 @@ def get_model():
 ### User's image preparation for the model
 
 Check out the [`routes.py`](https://github.com/harrinupponen/wizardify/blob/latest/app/routes.py) for the details
+
+
+### About the model used in TFJS
+
+TFJS uses the same model as the python version, but it is broken into shards using
+
+`tensorflowjs_converter --input_format keras <PATH/TO/EXISTING/MODEL.h5> <PATH/TO/CONVERTED/MODEL/FOLDER>`
+
+in command line. See [this tutorial](https://www.tensorflow.org/js/tutorials/conversion/import_saved_model) for more info.
+
+See also [predict.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/static/predict.js) which contains the commented functions used in this version.
+
