@@ -58,3 +58,20 @@ def get_model():
 ### User's image preparation for the model
 
 Check out the [`routes.py`](https://github.com/harrinupponen/wizardify/blob/latest/app/routes.py) for the details
+
+
+
+## Tensorflow.js
+
+We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://www.heroku.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
+
+### About the model used in TFJS
+
+TFJS uses the same model as the python version, but it is broken into shards using
+
+`tensorflowjs_converter --input_format keras <PATH/TO/EXISTING/MODEL.h5> <PATH/TO/CONVERTED/MODEL/FOLDER>`
+
+in command line. See [this tutorial](https://www.tensorflow.org/js/tutorials/conversion/import_saved_model) for more info.
+
+See also [predict.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/static/predict.js) which contains the commented functions used in this version.
+
