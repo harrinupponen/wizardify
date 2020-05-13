@@ -2,23 +2,25 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block content %}
-<h1 id="subtitle">Wizardify</h1>
-<!-- Upload image -->
 
+<div id="title-container">
+  <h1 id="subtitle">Wizardify</h1>
+</div>
 <div id="subcontainer">
   <div class="row h-100">
     <div class="col-2" id="edge-l">
       <!-- Left edge -->
     </div>
-    <div class="col-4" id="index-col-4-l">
+    <!-- Instructions -->
+    <div class="col-4 d-flex justify-content-center" id="index-col-4-l">
       <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
         <div class="card-header">Instructions:</div>
         <div class="card-body">
-          <h3 class="card-title">To find out your latent </br> Dungeons & Dragon - Class:</h3>
+          <h3 class="card-title">To find out your latent </br> Dungeons & Dragons - Class:</h3>
           <br>
-          <h5 class="d-flex justify-content-left">Step 1. Upload a picture in the field on the right</h5>
-          <h5 class="d-flex justify-content-left">Step 2. Press the button labeled 'Tell me!'</h5>
-          <h5 class="d-flex justify-content-left">Step 3. Bask in the glory of your result</h5>
+          <h5>Step 1. Upload a picture to the field on the right</h5>
+          <h5>Step 2. Press the button labeled 'Tell me!'</h5>
+          <h5>Step 3. Bask in the glory of your result</h5>
         </div>
       </div>
     </div>
@@ -35,13 +37,8 @@
             </div>
           </div>
         </div>
-        <!-- <div class="card" style="width: 18rem;">
-          <img id="selected-image" class="card-img-top" src="" alt="User image">
-          <div class="card-body">
-            <p class="card-text"></p>
-          </div>
-        </div> -->
       </div>
+      <!-- Image upload-form -->
       <form action="/result" method="POST" enctype="multipart/form-data">
         <input id="image-selector" type="file" name="file">
         <button id="predict-button" type="submit">Tell me!</button>
@@ -52,6 +49,7 @@
     </div>
   </div>
 </div>
+<!-- Image upload-script -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $('#image-selector').change(function() {
