@@ -13,8 +13,6 @@
     - [Installation](#installation)
       - [Optional](#optional)
   - [Tensorflow js](#tensorflow-js)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
   - [License](#license)
 
 ## About The Project
