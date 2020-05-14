@@ -42,7 +42,7 @@ Flask is used to work out the routing on the app. The front page of the web app 
 
 ## Tensorflow js
 
-We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://www.heroku.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
+We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://test-app-tfjs.herokuapp.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
 
 ## Getting Started
 
