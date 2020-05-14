@@ -8,11 +8,13 @@
   - [About The Project](#about-the-project)
     - [Built With](#built-with)
   - [Implementation](#implementation)
-  - [Tensorflow js](#tensorflow-js)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
       - [Optional](#optional)
+  - [Tensorflow js](#tensorflow-js)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
   - [License](#license)
 
 ## About The Project
@@ -39,10 +41,6 @@ The program is Python based web application that is built upon a Flask framework
 The readme for the Tensorflow part can be seen here: [TENSOR-README](https://github.com/harrinupponen/wizardify/blob/master/TENSOR-README.md)
 
 Flask is used to work out the routing on the app. The front page of the web app can recieve images sent by the user, which are then routed to the model for comparison. After the results are in, the user is redirected to the results page. The visuals of the app use Flask Bootstrap.
-
-## Tensorflow js
-
-We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://test-app-tfjs.herokuapp.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
 
 ## Getting Started
 
@@ -102,6 +100,36 @@ Show content of requirements.txt
 ```sh
 cat requirements.txt
 ```
+
+## Tensorflow js
+
+We also made a version using [Tensorflow.js](https://www.tensorflow.org/js), that can be found from [TFJS-folder](https://github.com/harrinupponen/wizardify/tree/master/TFJS). This version is tested to be working with [Heroku](https://test-app-tfjs.herokuapp.com/) and it uses [Node.js](https://nodejs.org/en/) and [express.js](https://expressjs.com/) for routing. For further dependencies and information about the build, see [package.json](https://github.com/harrinupponen/wizardify/blob/master/TFJS/package.json) and [server.js](https://github.com/harrinupponen/wizardify/blob/master/TFJS/server.js).
+
+### Prerequisites
+* Install npm
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/harrinupponen/wizardify.git
+```
+
+2. Install npm-packages
+```sh
+npm install
+```
+
+### Start the service
+
+```sh
+npm start
+```
+
+The service will run at [http://localhost:81](http://localhost:81)
 
 ## License 
 <!-- What license are we using?-->
