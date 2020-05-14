@@ -60,38 +60,6 @@ def about():
         content = file.read()
     return render_template('about.html', content=content)
 
-
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            #flash('No file part')
-            return "failure at 1"
-        file = request.files['file']
-        # if user does not select file, browser also
-        # submit an empty part without filename
-        if file.filename == '':
-            #flash('No selected file')
-            return "failure at 2"
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            #filename to random string maybe. gotta keep extensions!
-            fullpath = os.path.join(UPLOAD_FOLDER, filename)
-            file.save(fullpath)
-            return redirect(url_for('uploaded_file', filename=filename))
-
-    return url_for('uploaded_file', filename=filename)
-
-    
-@app.route('/downlooood/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(UPLOAD_FOLDER, filename)
-
-# @app.route('/result')
-# def result():
-#     return render_template('result.html')
-
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     if request.method == 'POST':
